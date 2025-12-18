@@ -1,2 +1,1 @@
-web: gunicorn task_manager.wsgi:application
-release: python manage.py migrate
+web: gunicorn task_manager.wsgi:application --bind 0.0.0.0:$PORT --workers 1
